@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 12px;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    ". search ."
+    "footer footer footer";
+    border:solid 1px black;
+    grid-template-rows: 13.3% 70% 10%;
+    grid-template-columns: 16% 40% 1fr;
+    height: 100vh;
+    margin:0;
+    border:solid 1px black;
+
+}
+#pageheader{
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 
+    "logo searchbar login"
+    "logo menus login";
+    grid-template-columns: 0.5fr 4fr 1fr  ;
+grid-template-rows: 2fr 1.4fr;
+    width: 100%;
+    border-bottom: solid 1px gray;
+}
+#corner-google{
+    grid-area: logo;
+    margin-top:7%;
+}
+#menus{
+    grid-area: menus;
+    display: flex;
+    justify-content: flex-start;
+    margin-top:7px;
+}
+
+
+#db{
+    display: flex;
+    justify-content: flex-end;
+    grid-area: login;
+    font-size:12px;
+}
+#Login{
+    color: white;
+    background-color: rgb(26,115,232);
+    width:100px;
+    height: 37px;
+    border-radius: 5px;
+    border:none;
+    margin-left: 1.3rem;
+    margin-right:2.5rem;
+    margin-top: 1.5rem;
+}
+#dots{
+margin-top:1.2rem;
+    width:40px;
+
+}
+.menu{
+    margin-right:20px;
+    margin-left:20px;
+}
+#search{
+    width:60rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    border: solid 1px #ebebeb;
+    background-color: white;
+    height:3.6rem;
+}
+/*gooogle corner logo (div and img)*/
+#corner-google{
+    margin-top: 1.8em;
+}
+#logoimg{
+    width:66%;
+    margin-left:1.3em;
+}
