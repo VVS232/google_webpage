@@ -15,8 +15,6 @@ body{
     grid-template-columns: 16% 40% 1fr;
     height: 100vh;
     margin:0;
-    border:solid 1px black;
-
 }
 #pageheader{
     grid-area: header;
@@ -27,7 +25,8 @@ body{
     grid-template-columns: 0.5fr 4fr 1fr  ;
 grid-template-rows: 2fr 1.4fr;
     width: 100%;
-    border-bottom: solid 1px gray;
+    border:solid 1px #ebebeb;
+
 }
 #corner-google{
     grid-area: logo;
@@ -64,22 +63,23 @@ margin-top:1.2rem;
 
 }
 .menu{
-    margin-right:20px;
+    margin-right:15px;
     margin-left:20px;
 }
 #search{
-    width:60rem;
+    width:56rem;
     margin-top: 2rem;
     border-radius: 20px;
     border: solid 1px #ebebeb;
     background-color: white;
     height:3.6rem;
 }
+
 /*gooogle corner logo (div and img)*/
 #corner-google{
     margin-top: 1.8em;
 }
 #logoimg{
-    width:66%;
+    width:54%;
     margin-left:1.3em;
 }
