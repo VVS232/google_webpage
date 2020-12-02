@@ -3,19 +3,20 @@
 }
 html{
     font-size: 12px;
+    margin: 0;
 }
 body{
     display: grid;
     grid-template-areas: 
     "header header header"
-    ". search ."
+    "search search search"
     "footer footer footer";
-    border:solid 1px black;
-    grid-template-rows: 13.3% 70% 10%;
-    grid-template-columns: 16% 40% 1fr;
+    grid-template-rows: 13.3vh 70vh 10vh auto-fit;
+    grid-template-columns: 1fr 1fr 1fr;
     height: 100vh;
     margin:0;
 }
+/*header which kinda works*/
 #pageheader{
     grid-area: header;
     display: grid;
@@ -23,7 +24,7 @@ body{
     "logo searchbar login"
     "logo menus login";
     grid-template-columns: 0.5fr 4fr 1fr  ;
-grid-template-rows: 2fr 1.4fr;
+    grid-template-rows: 2fr 1.4fr;
     width: 100%;
     border:solid 1px #ebebeb;
 
@@ -37,6 +38,7 @@ grid-template-rows: 2fr 1.4fr;
     display: flex;
     justify-content: flex-start;
     margin-top:7px;
+    color: rgb(95, 99, 104);
 }
 
 
@@ -75,11 +77,47 @@ margin-top:1.2rem;
     height:3.6rem;
 }
 
+/*End of header*/
+
+
+
 /*gooogle corner logo (div and img)*/
 #corner-google{
     margin-top: 1.8em;
 }
 #logoimg{
-    width:54%;
+    width:90px;
     margin-left:1.3em;
+}
+/*end of logo*/
+
+/*Search result*/
+
+#results{
+    grid-area: search;
+    margin-left:10%;
+    max-width: 690px;
+}
+.result{
+    margin-top: 4%;
+}
+.translate{
+    color: rgb(26, 13, 171);
+    font-size: 1.1rem;
+    margin-left: 4%;
+}
+.resultname{
+    color: rgb(26, 13, 171);
+    font-size:1.6rem;
+    margin:0;
+    line-height: 20px;
+}
+#resnum{
+    color:rgb(112, 117, 122)
+}
+.linktosite{
+    font-size: 1.1rem;
+}
+.description{
+    font-size: 1.1rem;
 }
