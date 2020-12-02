@@ -121,3 +121,7 @@ margin-top:1.2rem;
 .description{
     font-size: 1.1rem;
 }
+.videos{
+    border: solid 1px #ebebeb;
+    height:400px;
+}
