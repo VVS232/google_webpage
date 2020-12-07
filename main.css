@@ -11,7 +11,7 @@ body{
     "header header header"
     "search search search"
     "footer footer footer";
-    grid-template-rows: 13.3vh 70vh 10vh auto-fit;
+    grid-template-rows: 13.3vh 70vh 5vh auto-fit;
     grid-template-columns: 1fr 1fr 1fr;
     height: 100vh;
     margin:0;
@@ -121,7 +121,71 @@ margin-top:1.2rem;
 .description{
     font-size: 1.1rem;
 }
-.videos{
-    border: solid 1px #ebebeb;
-    height:400px;
+#videores{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#videoimg{
+    margin-right:10px;
+}
+.image{
+    max-width: 150px;
+    height: auto;
+    margin-right: 30px;
+}
+.picsug{
+    
+    border: 1px solid #ebebeb;
+    width:fit-content;
+    border-radius: 30px;
+    height: auto;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 7px;
+}
+.picsugs{
+    display: flex;
+}
+.images{
+    display: flex;
+    overflow: scroll;
+    background-color: #ebebeb;
+}
+.advice{
+    color:#1a0dab;
+font-weight: bold;
+}
+#pages{
+    color:#1a0dab;
+    text-align: center;
+    font-size: 14px;
+    word-spacing: 220%;
+    
+}
+#next{
+    margin-left: 70px;
+}
+/*search section looks fine, next is footer*/
+
+
+footer{
+    grid-area: footer;
+ 
+    background-color: #f2f2f2;
+    width: 100%;
+    padding-left: 10%;
+    color:rgba(0,0,0,.54);
+    font-size: 13px;
+}
+#row1, #row2{
+    display: flex;
+    width: 100%;
+}
+.footel{
+    margin-right: 20px;
+}
+#country{
+    border-right: solid 1px #dadce0;
+    padding-right: 10px;
+    margin-right: 10px;
 }
