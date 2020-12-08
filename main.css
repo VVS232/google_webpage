@@ -8,11 +8,10 @@ html{
 body{
     display: grid;
     grid-template-areas: 
-    "header header header"
-    "search search search"
-    "footer footer footer";
+    "header"
+    "search"
+    "footer";
     grid-template-rows: 13.3vh 70vh 5vh auto-fit;
-    grid-template-columns: 1fr 1fr 1fr;
     height: 100vh;
     margin:0;
 }
@@ -40,8 +39,36 @@ body{
     margin-top:7px;
     color: rgb(95, 99, 104);
 }
-
-
+#all::before{
+    font-family: 'Material Icons';
+    content: "search";
+    font-size: 110%;
+}
+#news::before{
+    font-family: 'Material Icons';
+    content: "list_alt";
+    font-size: 110%;
+}
+#map::before{
+    font-family: 'Material Icons';
+    content: "map";
+    font-size: 110%;
+}
+#video::before{
+    font-family: 'Material Icons';
+    content: "movie";
+    font-size: 110%;
+}
+#pics::before{
+    font-family: 'Material Icons';
+    content: "photo_library";
+    font-size: 110%;
+}
+#more::before{
+    font-family: 'Material Icons';
+    content: "more_vert";
+    font-size: 110%;
+}
 #db{
     display: flex;
     justify-content: flex-end;
@@ -76,6 +103,87 @@ margin-top:1.2rem;
     background-color: white;
     height:3.6rem;
 }
+#sform::after{
+    font-family: "Material Icons";
+    content: "keyboard" "search" ;
+    font-size: 200%;
+    position: relative;
+    left:-5%;
+    top:10%;
+    color:blue;
+}
+@media (max-width:1050px){
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "search"
+        "footer";
+        grid-template-rows: fit-content;
+        grid-template-columns: 100vw;
+        height: 100vh;
+        margin:0;
+    }
+    #pageheader{
+        grid-area: header;
+        display: grid;
+        grid-template-areas: 
+        "logo searchbar"
+        "menus menus";
+        grid-template-columns: 20vw 80vw  ;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        border:solid 1px #ebebeb;
+}
+#db{
+    grid-area: initial;
+    display: inline;
+    visibility: collapse;
+    width:0;
+    height:0;
+}
+#search{
+    width:70vw;
+}
+#sform::after{
+    font-family: "Material Icons";
+    content: "" ;
+    font-size: 200%;
+    position: absolute;
+    color:blue;
+right:0;
+}
+#logoimg{
+    width:20vw;
+}
+.images{
+    display: flex;
+    overflow: scroll;
+    background-color: #ebebeb;}
+
+.picsugs{
+    overflow: scroll;
+}
+#menus{
+    grid-area: menus;
+    display: flex;
+    justify-content: flex-start;
+    margin-top:0px;
+    color: rgb(95, 99, 104);
+    flex-wrap: wrap;
+    line-height: 4px;
+    margin-top: 4px;
+}
+#sform{
+    height:10px;
+}
+#row1,#row2{
+    flex-wrap: wrap;
+}
+}
+
+
+
 
 /*End of header*/
 
@@ -112,6 +220,9 @@ margin-top:1.2rem;
     margin:0;
     line-height: 20px;
 }
+.resultname:hover{
+    text-decoration: underline;
+}
 #resnum{
     color:rgb(112, 117, 122)
 }
@@ -130,8 +241,8 @@ margin-top:1.2rem;
 }
 .image{
     max-width: 150px;
-    height: auto;
-    margin-right: 30px;
+    height:100px;
+    margin-right: 10px;
 }
 .picsug{
     
@@ -165,7 +276,6 @@ font-weight: bold;
 #next{
     margin-left: 70px;
 }
-/*search section looks fine, next is footer*/
 
 
 footer{
@@ -181,6 +291,10 @@ footer{
     display: flex;
     width: 100%;
 }
+#row1{
+    border-bottom: solid 1px #dadce0;
+    border-width: 100%;
+}
 .footel{
     margin-right: 20px;
 }
@@ -188,4 +302,92 @@ footer{
     border-right: solid 1px #dadce0;
     padding-right: 10px;
     margin-right: 10px;
+}
+
+@media (max-width:520px){
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "search"
+        "footer";
+        grid-template-rows: fit-content;
+        grid-template-columns: 100vw;
+        height: 100vh;
+        margin:0;
+    }
+    #pageheader{
+        grid-area: header;
+        display: grid;
+        grid-template-areas: 
+        "logo searchbar"
+        "menus menus";
+        grid-template-columns: 20vw 80vw  ;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        border:solid 1px #ebebeb;
+}
+#db{
+    grid-area: initial;
+    display: inline;
+    visibility: collapse;
+    width:0;
+    height:0;
+}
+#search{
+    width:60vw;
+}
+#sform::after{
+    font-family: "Material Icons";
+    content: "" ;
+    font-size: 200%;
+    position: absolute;
+    color:blue;
+right:0;
+}
+#logoimg{
+    width:20vw;
+    justify-self: start;
+}
+.images{
+    display: flex;
+    overflow: scroll;
+    background-color: #ebebeb;}
+
+.picsugs{
+    overflow: scroll;
+}
+#menus{
+    grid-area: menus;
+    display: flex;
+    justify-content: flex-start;
+    margin-top:0px;
+    color: rgb(95, 99, 104);
+    flex-wrap: wrap;
+    line-height: 4px;
+    margin-top: 4px;
+}
+#sform{
+    height:10px;
+    justify-self: center;
+}
+#videoimg{
+    width:50%;
+    height:50%;
+}
+#videores{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#other{
+    visibility: collapse;
+}
+#city{
+    margin-bottom: 0;
+}
+footer{
+    grid-area: footer;
+    font-size: 10px;
+}
 }
