@@ -26,11 +26,12 @@ body{
     grid-template-rows: 2fr 1.4fr;
     width: 100%;
     border:solid 1px #ebebeb;
-
 }
 #corner-google{
     grid-area: logo;
     margin-top:7%;
+    position: sticky;
+
 }
 #menus{
     grid-area: menus;
@@ -74,6 +75,8 @@ body{
     justify-content: flex-end;
     grid-area: login;
     font-size:12px;
+    position: sticky;
+
 }
 #Login{
     color: white;
@@ -103,6 +106,8 @@ margin-top:1.2rem;
     background-color: white;
     height:3.6rem;
 }
+
+
 #sform::after{
     font-family: "Material Icons";
     content: "keyboard" "search" ;
@@ -205,6 +210,8 @@ right:0;
     grid-area: search;
     margin-left:10%;
     max-width: 690px;
+    width:100%;
+    
 }
 .result{
     margin-top: 4%;
